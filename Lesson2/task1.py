@@ -26,10 +26,8 @@
 #    сопровождение кода (что в применении к задаче такой сложности звучит немного комично).
 # Вывод:
 #    на мой взгляд, наиболее подходящей для данной задачи является процедурная парадигма.
-
-
-def printExampleSum(a, b):
-    print('%i + %i = %2d' % (a, b, a+b))
+# Если же мы добавим структуру проверки правильности введённых данных,
+# то в программе появятся элементы структурной парадигмы
 
 
 def printExampleMul(a, b):
@@ -47,5 +45,19 @@ def printOneToNumExamples(num):
         print()
 
 
-n = int(input('Введите натуральное число: '))
-printOneToNumExamples(n)
+# Решение в процедурной парадигме:
+# n = int(input('Введите натуральное число от 1 до 9: '))
+# printOneToNumExamples(n)
+
+# Добавим элементы структурной парадигмы:
+toContinue = True
+while toContinue == True:
+    n = input('Введите натуральное число от 1 до 9: ')
+    if n == "q" or n == "Q" or n == "й" or n == "Й":
+        toContinue = False
+    elif n.isdigit() and int(n) > 0 and int(n) < 10:
+        n = int(n)
+        printOneToNumExamples(n)
+        toContinue = False
+    else:
+        print('Ошибка. Повторите ввод или введите q')
