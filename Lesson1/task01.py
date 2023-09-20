@@ -6,14 +6,11 @@
 
 
 # Сортировка по убыванию двух соседних чисел
-
-
 def sortTwoNumbers(a, b):
     return [a, b] if a > b else [b, a]
 
+
 # Вытеснение наименьшего "пузырька" в конец массива
-
-
 def moveMinNumToEnd(k):
     for i in range(len(numList) - k):
         numList[i], numList[i+1] = \
@@ -28,7 +25,7 @@ def sort_list_imperative(numbers):
 def printArray(comment, arr):
     print(comment)
     for i in arr:
-        print(i, " ", end="")
+        print(i, end=" ")
 
 
 numList = [12, 2, -7, 25, 0, 12, 14, 7]

@@ -12,7 +12,7 @@ def sort_list_declarative(numbers):
 def printArray(comment, arr):
     print(comment)
     for i in arr:
-        print(i, " ", end="")
+        print(i, end=" ")
 
 
 numList = [12, 2, -7, 25, 0, 12, 14, 7]
